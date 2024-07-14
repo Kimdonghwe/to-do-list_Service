@@ -1,0 +1,61 @@
+html body {
+    background-color: rgb(163, 161, 161);
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 15px;
+    width: 80%;
+    height: 80%;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.user-today-tomorrow-toDo{
+    margin-top: 15px;
+    height: 100%;
+
+}
+
+.user-today-tomorrow-toDo > .row:first-child{
+    height: 60%;
+}
+
+.user-toDo-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; /* 부모 요소의 높이를 100vh로 설정 */
+      text-align: center; /* 텍스트를 중앙 정렬 */
+}
+
+.list-group{
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.create-plan-wrapper{
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+
+/* button css */
+
+.create-plan {  display: inline-block;  border-radius: 4px;  background-color: #b227ce;  border: none;  color: #FFFFFF;  text-align: center;  font-size: 25px;  padding: 20px;  width: 300px;  transition: all 0.5s;  cursor: pointer;  margin: 5px;}
+.create-plan span {  cursor: pointer;  display: inline-block;  position: relative;  transition: 0.5s;}
+
+.create-plan span:after {
+    content: '\00bb';  /* CSS Entities. To use HTML Entities, use →*/
+    position: absolute;  opacity: 0;  top: 0;  right: -20px;  transition: 0.5s;
+}
+    .create-plan:hover span {  padding-right: 25px;}
+    .create-plan:hover span:after {  opacity: 1;  right: 0;}

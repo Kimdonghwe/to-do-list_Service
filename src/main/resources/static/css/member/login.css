@@ -1,0 +1,12 @@
+html,
+body {
+	height: 100%; /* 브라우저 뷰포트의 전체 높이를 차지하도록 설정 */
+}
+
+body {
+	display: flex;
+	align-items: center; /* 수직 중앙 정렬 */
+	justify-content: center; /* 수평 중앙 정렬 */
+	padding: 0;
+	margin: 0;
+}

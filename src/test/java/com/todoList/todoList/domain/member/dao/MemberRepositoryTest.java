@@ -25,7 +25,7 @@ class MemberRepositoryTest {
   @Test
   @DisplayName("회원등록")
   void saveMember() {
-    String email = "test";
+    String email = "test2";
     String pw = "1234";
     String nickname = "kdh";
 
@@ -35,7 +35,8 @@ class MemberRepositoryTest {
             .nickname(nickname)
             .build();
 
-    memberRepository.save(member);
+   log.info("member = {}", memberRepository.save(member));
+
   }
 
   @Test

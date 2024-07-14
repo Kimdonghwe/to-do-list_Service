@@ -1,0 +1,48 @@
+.navbar-custom {
+    background-color: #44404e; /* 배경색을 검은색으로 설정 */
+    color: #ffffff; /* 텍스트 색상을 흰색으로 설정 */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff; /* 브랜드 및 링크 텍스트 색상을 흰색으로 설정 */
+}
+
+.navbar-custom .nav-link:hover {
+    color: #dddddd; /* 링크에 마우스를 올렸을 때 색상 변경 */
+}
+
+.logo{
+    color: #ffffff;
+    text-shadow:2px 2px gray;
+    font-style: oblique;
+    
+   }
+
+
+.nav-menu{
+    display: flex;
+    width: 80%;
+    justify-content: end;
+}
+
+#dropdownButton{
+    color: white;
+}
+
+.dropdown-menu {
+	display: none; /* 기본적으로 숨김 */
+	position: absolute;
+	background-color: #f1f1f1;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-menu a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-menu a:hover {
+	background-color: #ddd;
+}

@@ -3,10 +3,64 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>시작화면</title>
+
+  <!-- 네비게이션바 부분 -->
+  <link rel="stylesheet" type="text/css" href="/css/common/nav.css" />
+  <script src="/js/common/nav.js" defer></script>
+
+  <link href="/css/home/home.css" rel="stylesheet" type="text/css" />
+  <script src="/js/home/home.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" th:href="@{/}"><h2 class="logo">To-Do-List</h2></a>
+    
+    <div class="nav-menu">
+      <ul class="navbar-nav ml-auto">
+        <li th:if="${session.loginMember != null}" class="nav-item">
+					<button id="dropdownButton" class="btn " th:text="${session.loginMember.nickname}+'님'">메뉴 열기</button>
+					<div id="dropdownMenu" class="dropdown-menu">
+						<a href="/logout">로그아웃</a>
+						<a href="#">마이페이지</a>
+					</div>
+				</li>
+        <li th:if="${session.loginMember == null}" class="nav-item">
+					<a class="nav-link" th:href="@{/login}">로그인</a>
+				</li>
+      </ul>
+    </div>
+  </nav>
 
-  <h1>to-do-list_Service</h1>
+  <div class="container">
+
+    <div class="user-today-tomorrow-toDo">
+      <div class="row">
+        <div class="col-6 user-toDo-item">
+          <h3>오늘 할 일</h3>
+          <div id="todayToDoList" class="list-group">
+
+          </div>
+        </div>
+        <div class="col-6 user-toDo-item ">
+          <h3>내일 할 일</h3>
+          <div id="tomorrowToDoList" class="list-group">
+          </div>
+        </div>
+
+        <div class="col-12 create-plan-wrapper">
+          <button class="create-plan">
+            <span>CREATE TO DO</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
